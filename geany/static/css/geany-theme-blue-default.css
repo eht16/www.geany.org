@@ -1,0 +1,36 @@
+/* buttons */
+.btn-primary {
+    color: rgb(255, 255, 255);
+    background-color: rgb(66, 139, 202);
+    border-color: rgb(53, 126, 189);
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    color: rgb(255, 255, 255);
+    background-color:rgb(48, 113, 169);
+    border-color:rgb(40, 94, 142);
+}
+
+/* links */
+a {
+    color: rgb(66, 139, 202);
+}
+a:hover, a:focus {
+    color: rgb(42, 100, 150);
+}
+a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
+    border-color: rgb(42, 100, 150);
+}
+
+/* code block*/
+code {
+    color: rgb(66, 139, 202);
+}
+pre {
+    color: rgb(66, 139, 202);
+}
+
+/* homepage icons */
+.feature-icon span {
+    color: white;
+    background-color: rgb(50, 118, 177);
+}

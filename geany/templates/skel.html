@@ -17,6 +17,12 @@
 <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
 <link rel="stylesheet" href="{% static "css/main.css" %}">
 <link rel="stylesheet" type="text/css" href="{% static "css/pygments.css" %}">
+
+<link rel="stylesheet"              href="{% static "css/geany-theme-blue-default.css" %}" title="default" id="stylesheet">
+<link rel="alternate stylesheet"    href="{% static "css/geany-theme-yellow-b4n.css" %}" title="yellow-b4n">
+<link rel="alternate stylesheet"    href="{% static "css/geany-theme-yellow-eht16.css" %}" title="yellow-eht16">
+<link rel="alternate stylesheet"    href="{% static "css/geany-theme-yellow-gmail.css" %}" title="yellow-gmail">
+
 {% block extra_css %}{% endblock %}
 {% endcompress %}
 
@@ -67,7 +73,48 @@ $(function() {
 
 {% include "includes/footer_scripts.html" %}
 
-{% block footer_js %}{% endblock %}
+{% block footer_js %}
+<script>
+
+  $(document).ready(function () {
+      colorFunDropdown = `
+        <!-- start color fun -->
+        <li class="dropdown">
+            <a href="/contribute/" class="dropdown-toggle" data-toggle="dropdown">
+                Color fun
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu" id="styleswitcher">
+                    <li><a data-stylesheet="{% static "css/geany-theme-blue-default.css" %}">Bootstrap Default</a></li>
+                    <li><a data-stylesheet="{% static "css/geany-theme-yellow-b4n.css" %}">b4n's yellow</a></li>
+                    <li><a data-stylesheet="{% static "css/geany-theme-yellow-eht16.css" %}">eht16's yellow</a></li>
+                    <li><a data-stylesheet="{% static "css/geany-theme-yellow-gmail.css" %}">gmail's yellow</a></li>
+                </ul>
+            </li>
+        <!-- end color fun -->
+`;
+        $("ul.nav").append(colorFunDropdown);
+        debugger;
+
+  var currentSheet = document.getElementById("stylesheet"),
+  switcher = document.getElementById("styleswitcher");
+
+  function loadStyle () {
+    currentSheet.href = stylez;
+  }
+
+  switcher.addEventListener("click", function (ev) {
+    var b = ev.target; // button
+
+    if (b && b.hasAttribute("data-stylesheet")) {
+      stylez = b.getAttribute("data-stylesheet");
+    }
+
+    loadStyle();
+  });
+
+  });
+</script>
+{% endblock %}
 
 </body>
 </html>

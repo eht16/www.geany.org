@@ -1,0 +1,41 @@
+/*
+ * Main link color: #ffb302 rgb(255, 179, 2)
+ *
+ * Alternate color (borders, background, ...): #D29300 rgb(210, 147, 0)
+ */
+
+/* buttons */
+.btn-primary {
+    background-color: rgb(210, 147, 0);
+    border-color: rgb(255, 179, 2);
+    color: rgb(0, 0, 0);
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background-color: rgb(255, 179, 2);
+    border-color: rgb(210, 147, 0);
+    color: rgb(0, 0, 0);
+}
+
+/* links */
+a {
+    color: rgb(210, 147, 0);
+}
+a:hover, a:focus {
+    color: rgb(255, 179, 2);
+}
+a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
+    border-color: rgb(255, 179, 2);
+}
+
+/* code block*/
+code {
+    color: rgb(210, 147, 0);
+}
+pre {
+    color: rgb(210, 147, 0);
+}
+
+/* homepage icons */
+.feature-icon span {
+    background-color: rgb(255, 179, 2);
+}

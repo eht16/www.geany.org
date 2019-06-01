@@ -1,0 +1,35 @@
+/* buttons */
+.btn-primary {
+    color: black; /* for more readability */
+    background-color: #F5DA2F;
+    border-color: #F0C404;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    color: black;
+    background-color:#F0C404;
+    border-color:#F0C404
+}
+
+/* links */
+a {
+    color: #F0AD04;
+}
+a:hover, a:focus {
+    color: #F5DA2F;
+}
+a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
+    border-color: #F5DA2F;
+}
+
+/* code block*/
+code {
+    color: #F0AD04;
+}
+pre {
+    color: #F0AD04;
+}
+
+/* homepage icons */
+.feature-icon span {
+    background-color: #F5DA2F;
+}
